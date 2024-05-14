@@ -1,0 +1,421 @@
+*{
+    /*Se utiliza para poner limites dentro de la ventana
+    la sentancia border-bpx especifica que los elementos no deben
+    salirse de los limites de la pantalla*/
+    box-sizing: border-box;
+}
+body{
+    font-family:"Roboto";
+    font-size: 13px;
+}
+a{
+    display: inline-block;
+    text-decoration: none;
+}
+p{
+    color:black;
+}
+header{
+    padding: 15px 0;
+    position: fixed;
+    top:0;
+    left: 0;
+    width: 100%;
+    z-index: 2;
+    background-color: black;
+}
+
+/*header .container quiere decir que vamos a modificar el container
+que se encuentra dentro del elemento header, importante el espacio*/
+header .container-fluid{
+    /*inline- block: ayuda a que los elementos se pongan uno al lado del otro
+    respeta la altura de los elementos
+    inline: pone los elementos uno al lado del otro
+    flex: organiza los elementos segun gerarquias de padres a hijos*/
+    display: flex;
+    /*Organiza los elemetos segun un parametro, en este caso el parametro
+    space between que coloca simetricamente los elementos en una linea*/
+    justify-content:space-between;
+    /*aling-items ayuda a alinear los items de acuerdo a un parametro, en este caso
+    se alinea de forma central en el eje x*/
+    align-items: center;
+}
+
+header .container-fluid .logo
+{
+    width: 100px;
+}
+header .container-fluid nav a
+{
+    color: red;
+    /*Se quita la decoracion de texto con el none, si se quiere subrayar
+    se pone underline*/
+    text-decoration: none;
+    margin: 0 15px;
+    
+}
+header .container-fluid .hamb{
+    display: none;
+}
+footer.seccion{
+    background-color: black;
+    color: white;
+    padding-bottom: 0;
+}
+footer .barra-footer{
+    background-color: gray;
+    text-align: center;
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+footer .logo-footer{
+    width: 100%;
+}
+footer ul{
+    padding-left: 0;
+    list-style: none;
+    margin:0;
+}
+footer ul li{
+    margin-bottom: 5px;
+}
+footer p{
+    color: white;
+    margin-bottom: 30px;
+}
+footer a{
+    color: white;
+}
+footer .redes{
+    font-size: 16px;
+    display: flex;
+}
+footer .redes a{
+    margin: 0 7.5px;
+}
+.boton{
+    text-align: center;
+    text-decoration: none;
+    padding: 15px  30px;
+}
+
+.boton.boton-rojo{
+    color:white ;
+    background-color: red;
+    font-size: 20px;
+    font-weight: bold ;
+}
+.boton.boton-blanco{
+    color:red ;
+    background-color: white;
+    font-size: 16px;
+    font-weight: bold ;
+}
+.boton.boton-negro{
+    color:white ;
+    background-color:black;
+    font-size: 16px;
+    font-weight: bold ;
+}
+.boton.boton-negro:hover{
+    color:black ;
+    background-color:white;
+    font-size: 16px;
+    font-weight: bold ;
+}
+.seccion{
+    padding-top: 60px ;
+    padding-bottom: 60px;
+}
+.cuadrado-perfecto
+{
+    width: 100%;
+    padding-bottom: 100%;
+    position: relative;
+
+}
+.cuadrado-perfecto img
+{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+    position: absolute;
+    top: 0;
+    left: 0;
+    
+}
+.container{
+    /*Se especifica que todas las clases container van a tener este ancho*/
+width: 1140px;
+    /*Se aplica una margen a todas las clases container la estructura de margen es
+    margin: numero_del_margen_ejey numero_de_margen_ejex*/
+margin: 0 auto;
+    /*El padding se utiliza para dar mrgen hacua adentro del elemento*/
+padding-right: 15px;
+padding-left: 15px;
+position: relative;
+}
+.container-fluid{
+    width: 100%;
+    padding-right: 15px;
+    padding-left: 15px;
+    position: relative;
+}
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    margin-left: 0;
+    margin-right: 0;
+}
+.columna{
+    padding-right:15px ;
+    padding-left:15px ;
+}
+.columna-25{
+    width: 25% ;
+}
+.columna-33{
+    width: 33.33% ;
+}
+.columna-41{
+    width: 41.66%;
+}
+.columna-50{
+    width: 50%;
+}
+.empujar-50{
+    margin-left: 50%;
+}
+.empujar-58{
+    margin-left: 58.33%;
+}
+.empujar-66{
+    margin-left: 66.66%;
+}
+.empujar-0{
+    margin-left: 0;
+}
+#inicio{
+    position: relative;
+}
+
+#inicio img{
+    width: 100%;
+    display: block;
+}
+
+#inicio .bloque-inicio{
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    width: 400px ;
+    text-align: center;
+    margin-left: -200px;
+}
+
+#inicio .bloque-inicio h1{
+    color:white;
+    font-size: 35px;
+}
+#inicio .bloque-inicio p{
+    color:white;
+    font-size: 16px;
+}
+#nosotros{
+    background-image: url(imgsc/latas.jpg);
+    background-size: cover;
+
+}
+
+#nosotros p{
+    color:white;
+    text-align: center;
+    font-size: 16px;
+}
+
+#servicios .bloque-servicio{
+    border: 1px solid grey;
+}
+#servicios .bloque-servicio .bloque-img-servicio img
+{
+    width: 100%;
+}
+#servicios .bloque-servicio .bloque-img-servicio.cuadrado-perfecto{
+    padding-bottom: 56.25%;
+}
+#servicios .bloque-servicio .bloque-contenido-servicio{
+    padding: 15px;
+}
+
+#servicios .bloque-servicio .bloque-contenido-servicio h3{
+    margin: 0;
+    font-size: 25px;
+}
+#galeria h4{
+    padding-right: 15px;
+    padding-left: 15px;
+    text-align: center;
+    position: absolute;
+    top: 40%;
+    color:white;
+    font-size: 18px;
+    width: 100%;
+}
+#galeria img{
+    filter: grayscale(1);
+}
+#galeria .cuadrado-perfecto:hover img{
+    filter: grayscale(0);
+}
+#galeria .cuadrado-perfecto:hover h4{
+    display: none;
+}
+#contactenos{
+    position: relative;
+    padding-top: 30px;
+    padding-bottom: 30px;
+}
+#contactenos iframe{
+    position:absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    filter: grayscale(1);
+}
+#contactenos form{
+    padding: 60px ;
+    background-color: red;
+}
+#contactenos form .form-block{
+    width:100% ;
+    margin-bottom: 15px;
+}
+#contactenos form .form-block .form-control{
+    display:block ;
+    height: 40px;
+    font-size: 16px;
+    border: 1px solid grey;
+    width: 100%;
+    padding: 5px 10px;
+
+}
+#contactenos form .form-block textarea{
+    display:block ;
+    height: 100px;
+    font-size: 16px;
+    border: 1px solid grey;
+    width: 100%;
+    padding: 5px 10px;
+    
+}
+#contactenos form .form-block.bloque-ultimo{
+    margin-bottom: 0;
+}
+
+@media(max-width:767px){
+    body{
+        font-size: 15px;
+    }
+    header .container-fluid nav{
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        background-color:black;
+        padding-top: 80px;
+        padding-bottom: 80px;
+        padding-left: 15px;
+        padding-right: 15px;
+        top: 0;
+        left: 0;
+        display: flex;
+        flex-direction: column;
+        transition: all 0.4s ease;
+        transform: translateX(100%);
+    }
+    header .container-fluid nav.open{
+        transform: translateX(50%);
+    }
+    header .container-fluid .hamb{
+        display: block;
+        font-size: 35px;
+        color: red;
+        position: relative;
+    }
+    header .container-fluid nav a{
+        font-size: 30px;
+        margin: 15px 0;
+    }
+    form .boton.boton-negro{
+        width: 100%;
+    }
+    footer{
+        text-align: center;
+    }
+    footer .logo-footer {
+        width: 50%;
+    }
+    footer .redes {
+        justify-content: center;
+    }
+    .container{
+        width: 100%;
+    }
+    .columna-mobile-100{
+        width: 100%;
+    }
+    .columna-mobile-50{
+        width: 50%;
+    }
+    .empujar-mobile-0{
+        margin-left: 0;
+    }
+    .sinpadding-mobile{
+        padding:0;
+    }
+    #inicio{
+        height: 100vh;
+    }
+    #inicio img{
+        height: 100%;
+        object-fit: cover ;
+        object-position: center;
+    }
+    #inicio .bloque-inicio{
+        width: 100%;
+        left: 0;
+        margin-left: 0;
+        padding: 0 15px;
+    }
+
+    #servicios .bloque-img-servicio{
+        margin-bottom: 15px;
+    }
+    #contactenos{
+        padding: 0;
+    }
+    #contactenos iframe{
+        position:relative ;
+        height: 50vh;
+    }
+    #servicios .bloque-servicio {
+        margin-bottom: 15px;
+    }
+    #contactenos .container-fluid{
+        width: 100%;
+        padding-right: 0px;
+        padding-left: 0px;
+        position: relative;
+    }
+}
+
+@media (min-width: 991px)
+{
+}
+@media (min-width: 1199px)
+{
+
+}
